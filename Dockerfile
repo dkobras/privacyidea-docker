@@ -42,6 +42,7 @@ RUN apt-get update \
   && mkdir -p /var/log/privacyidea && touch /var/log/privacyidea/privacyidea.log && chmod a+rw /var/log/privacyidea/privacyidea.log \
   # check python
   && python3 --version \
+  && pip3 install --no-cache-dir --upgrade pip \
   # install privacyIDEA
   && pip3 install --no-cache-dir "privacyidea==$PRIVACYIDEA_VERSION" \
   # mysql driver
