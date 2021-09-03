@@ -15,6 +15,7 @@ docker exec -it privacyidea bash               # connect to privacyIDEA docker c
 pi-manage createdb                             # create db
 pi-manage create_enckey                        # create encryption keys
 pi-manage create_audit_keys                    # create signing keys
+chown -R privacyidea: /etc/privacyidea/keys    # ensure proper permissions on generated keys
 pi-manage admin add admin -e admin@localhost   # add admin user
 ```
 
